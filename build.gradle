@@ -1,0 +1,16 @@
+group 'flavor.pie'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    jcenter()
+    mavenCentral()
+    maven {
+        url "https://repo.spongepowered.org/maven/"
+    }
+}
+
+dependencies {
+    compileOnly 'org.spongepowered:spongeapi:5.0.0'
+}
