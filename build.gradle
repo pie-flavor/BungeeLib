@@ -14,3 +14,7 @@ repositories {
 dependencies {
     compileOnly 'org.spongepowered:spongeapi:5.0.0'
 }
+
+javadoc {
+    options.links ('https://docs.oracle.com/javase/8/docs/api/', 'https://jd.spongepowered.org/5.0.0/')
+}
