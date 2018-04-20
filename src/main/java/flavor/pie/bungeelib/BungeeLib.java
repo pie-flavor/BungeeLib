@@ -87,7 +87,7 @@ public class BungeeLib {
         checkState();
         checkNotNull(p, "p");
         checkNotNull(server, "server");
-        chan.sendTo(p, buf -> buf.writeUTF("Connect").writeUTF("server"));
+        chan.sendTo(p, buf -> buf.writeUTF("Connect").writeUTF(server));
     }
 
     /**
