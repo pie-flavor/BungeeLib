@@ -221,7 +221,7 @@ public class BungeeLib {
     public CompletableFuture<List<String>> getServerList() {
         checkState();
         CompletableFuture<List<String>> list = new CompletableFuture<>();
-        chan.sendTo(getPlayer(), buf -> buf.writeUTF("GetPlayers"));
+        chan.sendTo(getPlayer(), buf -> buf.writeUTF("GetServers"));
         listener.map.put(
                 (buf, conn) -> buf.resetRead().readUTF().equals("GetServers"),
                 buf -> list.complete(ImmutableList.copyOf(buf.readUTF().split(", ")))
